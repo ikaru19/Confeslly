@@ -1,10 +1,19 @@
+/* Post List Styling */
 .posts {
-    list-style: none;
-    max-width: 50rem;
-    margin: 1rem auto;
-    padding: 1rem 0;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 30%);
-    justify-content: center;
+  list-style: none;
+  max-width: 50rem;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  display: grid;
+  gap: 1.5rem;  /* Increased gap for better separation */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 1rem;  /* Slightly smaller gap for mobile screens */
   }
+}

@@ -1,38 +1,113 @@
+/* Post Styling */
 .post {
-    margin: 1rem 0;
-    padding: 1rem;
-    background-color: #9c7eee;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    animation: animate-in 1s ease-out forwards;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background-color: #9c7eee;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: animate-in 1s ease-out forwards;
+  word-wrap: break-word;
+  white-space: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 50rem;  /* Max width for larger screens */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Post hover effect */
+.post:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+}
+
+/* Link Styling */
+.post a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Author Styling */
+.author {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #543280;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Message Text Styling */
+.text {
+  font-size: 1.125rem;
+  margin: 0;
+  color: #593884;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* Animation */
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
   }
-  
-  .post a {
-    text-decoration: none;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+  .post {
+    padding: 2rem;
+    max-width: 50rem; /* Ensure a max-width on larger screens */
   }
   .author {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #543280;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
-  .text {
-    white-space: pre-wrap;
     font-size: 1.25rem;
-    margin: 0.25rem 0 0 0;
-    color: #593884;
-    font-style: italic;
   }
-  
+  .text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .post {
+    padding: 1rem;
+    width: 90%;  /* Ensure posts take the full width */
+    margin: 1rem auto;
+  }
+
+  .author {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
   @keyframes animate-in {
     from {
       opacity: 0;
-      transform: translateY(1rem);
+      transform: translateY(0.5rem);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
+}
