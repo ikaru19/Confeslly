@@ -46,7 +46,7 @@ export default NewPost;
 export async function action({request}) {
   const formData = await request.formData();
   const postData = Object.fromEntries(formData);
-  await fetch('http://localhost:4000/posts', {
+  await fetch('https://menfes-backend.onrender.com/posts', {
     method: 'POST',
     body: JSON.stringify(postData),
     headers: {
