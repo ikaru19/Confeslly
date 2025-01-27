@@ -1,24 +1,69 @@
+/* PostDetails Styling */
 .details {
-    padding: 1rem;
-    width: 30rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Author Styling */
+.author {
+  font-size: 1.25rem;  /* Slightly larger for readability */
+  font-weight: bold;
+  color: #543280;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Message Body Styling */
+.text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #593884;
+  font-style: italic;
+  margin: 0 0 1.5rem 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Button Styling */
+.details .btn {
+  padding: 0.75rem 2rem;
+  background-color: #543280;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.details .btn:hover {
+  background-color: #6a47b3;
+}
+
+/* Modal Layout */
+@media (max-width: 768px) {
+  .details {
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 90%;
   }
-  
   .author {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #543280;
-    margin: 0;
-    text-transform: uppercase;
+    font-size: 1rem;
   }
-  
   .text {
-    white-space: pre-wrap;
-    font-size: 1.25rem;
-    margin: 0.25rem 0 0 0;
-    color: #593884;
-    font-style: italic;
+    font-size: 1rem;
   }
-  
-  .details a {
-    text-decoration: none;
+  .details .btn {
+    width: 100%;
+    padding: 1rem;
   }
+}
